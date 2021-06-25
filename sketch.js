@@ -9,20 +9,19 @@ var world;
 
 
 function setup() {
-	createCanvas(1600, 700);
+	createCanvas(windowWidth, windowHeight);//!1600x700
 	rectMode(CENTER);
 
 
 	engine = Engine.create();
 	world = engine.world;
 	
-	groundObject=new ground(width/2,670,width,20);
-	dustbinObj=new dustbin(1200,650);
+	groundObject=new ground(width/2,height*0.9571428571428571,width,20);
+	dustbinObj=new dustbin(width*0.75,height*0.9285714285714286);
 
 	Engine.run(engine);
   
 }
-
 
 function draw() {
   rectMode(CENTER);
